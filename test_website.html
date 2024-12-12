@@ -3,93 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digitech - Technology Solutions</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Page Layout</title>
+    <style>
+        /* General styles */
+        body {
+            display: grid;
+            grid-template-rows: auto auto 1fr auto;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+        }
+
+        #header {
+            grid-column: 1 / 3;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        #nav {
+            grid-column: 1 / 3;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+        }
+
+        #nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        #nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        #nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        #section {
+            grid-column: 1 / 2;
+            background-color: #f4f4f4;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #aside {
+            grid-column: 2 / 3;
+            background-color: #fff9c4;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #footer {
+            grid-column: 1 / 3;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* Ensure responsiveness */
+        @media (max-width: 768px) {
+            body {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto 1fr 1fr auto;
+            }
+
+            #section {
+                grid-column: 1;
+            }
+
+            #aside {
+                grid-column: 1;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <h1 class="logo">Digitech</h1>
-            <nav class="navbar">
-                <ul class="nav-list">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <main>
-        <section class="hero">
-            <div class="container">
-                <h2>Your Partner in Technology</h2>
-                <p>Innovative solutions for web development, application development, and information security.</p>
-                <a href="services.html" class="btn">Explore Services</a>
-            </div>
-        </section>
-
-                   <div class="container">
-                <img src="Digitech_2020-01.png" alt="Logo" width="300">
-            </div>
-        </section>
+    <div id="header">
+        <h1>Welcome to DIGITECH</h1>
+        <p>Your home for digital services and information security solutions</p>
     </div>
-</div>
 
-        <section id="services" class="services">
-            <div class="container">
-                <h2>Our Services</h2>
-                <div class="service-cards">
-                    <div class="card">
-                        <img src="webdev.jpeg" alt="Web Development" class="card-image">
-                        <h3>Web Development</h3>
-                        <p>Custom and responsive websites to enhance your online presence.</p>
-                    </div>
-                    <div class="card">
-                        <img src="appdev.jpeg" alt="Application Development" class="card-image">
-                        <h3>Application Development</h3>
-                        <p>Modern apps tailored to meet your business needs.</p>
-                    </div>
-                    <div class="card">
-                        <img src="infosec.jpeg" alt="Information Security" class="card-image">
-                        <h3>Information Security</h3>
-                        <p>Protect your data with advanced security measures.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <div id="nav">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
 
-        <section id="about" class="about">
-            <div class="container">
-                <h2>About Digitech</h2>
-                <p>Digitech is a software company founded by Camille in 2024, dedicated to empowering businesses with cutting-edge technology solutions. Our team of experts specializes in delivering innovative, reliable, and scalable solutions tailored to your needs.</p>
-            </div>
-        </section>
+    <div id="section">
+        <h2>Main Section</h2>
+        <p>This is the main section content.</p>
+    </div>
 
-        <section id="contact" class="contact">
-            <div class="container">
-                <h2>Contact Us</h2>
-                <form action="#" class="contact-form">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
+    <div id="aside">
+        <h2>Aside Section</h2>
+        <p>This is the aside content.</p>
+    </div>
 
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-
-                    <button type="submit" class="btn">Send Message</button>
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Digitech. All rights reserved. Camille Asongtia</p>
-        </div>
+    <footer id="footer">
+        <p>&copy; 2024 DIGITECH. Camille Asongtia.</p>
     </footer>
 </body>
 </html>
